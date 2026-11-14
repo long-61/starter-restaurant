@@ -1,0 +1,91 @@
+body {
+    background-color: darkgrey;
+}
+
+header {
+    background-color: lightseagreen;
+    padding: 20px;
+}
+
+header a {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 12px 16px;
+}
+
+header a:hover {
+    background-color: darkgreen;
+    color: yellow;
+}
+
+header a[aria-current='page'] {
+    background-color: darkgreen;
+}
+
+:focus-visible {
+    outline: 3px solid red;
+    outline-offset: 3px;
+}
+
+main {
+    padding: 20px;
+    display: grid;
+    gap: 32px;
+}
+
+main section {
+    background-color: darkkhaki;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.restaurant-photo,
+.faux-menu,
+.reserve-photo {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+    margin-top: 20px;
+    border-radius: 18px;
+}
+
+.desserts-menu li,
+.drinks-menu li,
+.entrees-menu li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.desserts-menu ul,
+.drinks-menu ul,
+.entrees-menu ul {
+    padding-inline-start: 0;
+}
+
+#reservation-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.reservation-layout {
+    grid-template-columns: minmax(0, 480px);
+    justify-content: center;
+}

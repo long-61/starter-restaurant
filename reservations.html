@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservations</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Reservations</h1>
+      <nav>
+        <a href="index.html">Homepage</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservations.html" aria-current="page">Reservations</a>
+      </nav>
+    </header>
+    <img
+      class="reserve-photo"
+      src="reservation-images/360_F_182826259_9fO8JRWetocKdY37FHGCvIKfkraaJfWI.jpg"
+      alt="Reserved Table"
+    />
+    <main class="reservation-layout">
+      <section>
+        <form id="reservation-form">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-field">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+
+          <div class="form-field">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required />
+          </div>
+
+          <div class="form-field">
+            <label for="party-size">Party Size</label>
+            <input
+              type="number"
+              id="party-size"
+              name="party-size"
+              min="1"
+              max="60"
+              required
+            />
+          </div>
+
+          <button type="submit">Reserve</button>
+          <p id="reservation-message" role="status"></p>
+        </form>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
